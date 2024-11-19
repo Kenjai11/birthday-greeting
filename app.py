@@ -7,6 +7,9 @@ app = Flask(__name__, static_url_path='/static')
 def birthday_greeting():
     return render_template('index.html')
 
+# Add this for Vercel
+app = app
+
 if __name__ == '__main__':
     # Ensure the static/images directory exists
     os.makedirs('static/images', exist_ok=True)
