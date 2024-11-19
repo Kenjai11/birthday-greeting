@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('/static/images/courage-background.jpg.jpg') center/cover fixed;
+            font-family: 'Comic Neue', cursive;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.6));
+            z-index: 0;
+        }
+
+        .container {
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 0px #FF1493;
+            color: #fff;
+            transform: rotate(2deg);
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 1.5rem 0;
+            text-shadow: 2px 2px 0px #FF1493;
+        }
+
+        .heart {
+            color: #ff0000;
+            font-size: 2.5rem;
+            animation: pulse 1.5s infinite;
+            text-shadow: 2px 2px 0px #900;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2) rotate(10deg); }
+            100% { transform: scale(1); }
+        }
+
+        .cat-emoji {
+            font-size: 50px;
+            margin: 10px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="cat-emoji">🐱</span>
+        <h1>Happy Birthday My Donnat! 🎉</h1>
+        <p>On this special day, I want to tell you how much you mean to me.</p>
+        <p>You make every day brighter just by being you!</p>
+        <p>Wishing you all the happiness in the world.</p>
+        <p>I Love You! ❤️</p>
+        <p class="heart">❤️</p>
+        <span class="cat-emoji">😺</span>
+    </div>
+</body>
+</html>
